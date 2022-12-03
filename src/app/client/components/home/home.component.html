@@ -1,0 +1,219 @@
+<div class="body-app">
+  <app-nav></app-nav>
+  <main class="main">
+    <!-- Store-slider -->
+    <!-- Store-slider -->
+    <div class="store_slider">
+      <swiper [config]="config">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div
+              class="slider-image"
+              style="
+                background-image: url('../../../../assets/image/slider/pexels-nappy-936128.jpg');
+              "
+            ></div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="slider-image"
+              style="
+                background-image: url('../../../../assets/image/slider/pexels-gustavo-fring-4894829.jpg');
+              "
+            ></div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="slider-image"
+              style="
+                background-image: url('../../../../assets/image/slider/pexels-pixabay-325876.jpg');
+              "
+            ></div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="slider-image"
+              style="
+                background-image: url('../../../../assets/image/slider/pexels-the-lazy-artist-gallery-1300550.jpg');
+              "
+            ></div>
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </swiper>
+    </div>
+    <!-- Store-slider -->
+    <!-- Store-slider -->
+
+    <!-- Store-categories -->
+    <!-- Store-categories -->
+    <div class="store_categories">
+      <div class="store_cat_title">
+        <h2>Nos categories</h2>
+      </div>
+      <div class="store_cat_content">
+        <div class="store_cat_flex">
+          <a href="#" class="store_cat_box">
+            <div class="store_cat_image">
+              <img
+                src="../../../../assets/image/categories/pexels-daniel-friday-danzor-4600301.jpg"
+                alt=""
+              />
+            </div>
+            <div class="store_cat_name">
+              <span>Chemise</span>
+            </div>
+          </a>
+          <a href="#" class="store_cat_box">
+            <div class="store_cat_image">
+              <img
+                src="../../../../assets/image/categories/pexels-deepak-verma-1096849.jpg"
+                alt=""
+              />
+            </div>
+            <div class="store_cat_name">
+              <span>Costume</span>
+            </div>
+          </a>
+
+          <a href="#" class="store_cat_box">
+            <div class="store_cat_image">
+              <img
+                src="../../../../assets/image/categories/pexels-yuri-manei-2245432.jpg"
+                alt=""
+              />
+            </div>
+            <div class="store_cat_name">
+              <span>Manteau & Blouson</span>
+            </div>
+          </a>
+
+          <a href="#" class="store_cat_box">
+            <div class="store_cat_image">
+              <img
+                src="../../../../assets/image/categories/QF-JLS-Pull-N1-Winter.jpg"
+                alt=""
+              />
+            </div>
+            <div class="store_cat_name">
+              <span>Pull & Sweat</span>
+            </div>
+          </a>
+
+          <a href="#" class="store_cat_box">
+            <div class="store_cat_image">
+              <img
+                src="../../../../assets/image/categories/pexels-noah-smith-6766308.jpg"
+                alt=""
+              />
+            </div>
+            <div class="store_cat_name">
+              <span>Chaussure</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Store-categories -->
+    <!-- Store-categories -->
+
+    <!-- Store-video-collection -->
+    <!-- Store-video-collection -->
+    <div class="store_video_collection">
+      <div class="store_vid">
+        <video
+          src="../../../../assets/videos/coverr-store-assistant-puts-jacket-on-customer-4731-1080p.mp4"
+          [muted]="true"
+          [autoplay]="true"
+          [loop]="true"
+        ></video>
+      </div>
+      <div class="store_vid_text">
+        <div class="store_vid_text_header">
+          <h1>Assani</h1>
+          <h2>Collection</h2>
+        </div>
+        <div class="store_vid_text_btn">
+          <a href="#">Je découvre les collections</a>
+        </div>
+      </div>
+    </div>
+    <!-- Store-video-collection -->
+    <!-- Store-video-collection -->
+
+    <!-- Store-main-content -->
+    <!-- Store-main-content -->
+    <div class="main_content">
+      <div class="main_title">
+        <h2>Collections</h2>
+      </div>
+
+      <div class="products">
+        <div class="products_grid">
+          <a routerLink="/detail" class="product_box">
+            <div class="product_image">
+              <img src="../../../../assets/image/products/1002179_11845_V1.webp" alt="">
+            </div>
+            <div class="product_color">
+              <span class="color color_black"></span>
+            </div>
+            <div class="product_name">
+              <p class="name">Veste The Avener boutonnage croisé </p>
+              <p class="price">99.9$</p>
+            </div>
+          </a>
+          <a routerLink="/detail" class="product_box">
+            <div class="product_image">
+              <img src="../../../../assets/image/products/1002739_18006_V1.webp" alt="">
+            </div>
+            <div class="product_color">
+              <span class="color color_black"></span>
+              <span class="color color_bisque"></span>
+            </div>
+            <div class="product_name">
+              <p class="name">Veste slim motif jacquard </p>
+              <p class="price">99.9$</p>
+            </div>
+          </a>
+
+          <a routerLink="/detail"class="product_box">
+            <div class="product_image">
+              <img src="../../../../assets/image/products/1002509_18006_V1.webp" alt="">
+            </div>
+            <div class="product_color">
+              <span class="color color_black"></span>
+              <span class="color color_bisque"></span>
+              <span class="color color_blue"></span>
+              <span class="color color_grey"></span>
+            </div>
+            <div class="product_name">
+              <p class="name">Veste de costume extra-slim bistretch</p>
+              <p class="price">129.9$</p>
+            </div>
+          </a>
+
+          <a routerLink="/detail" class="product_box">
+            <div class="product_image">
+              <img src="../../../../assets/image/products/1002741_14237_V1.webp" alt="">
+            </div>
+            <div class="product_color">
+              <span class="color color_black"></span>
+              <span class="color color_blue"></span>
+            </div>
+            <div class="product_name">
+              <p class="name">Veste slim unie</p>
+              <p class="price">99.9$</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Store-main-content -->
+    <!-- Store-main-content -->
+
+  </main>
+</div>

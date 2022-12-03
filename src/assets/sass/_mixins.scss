@@ -1,0 +1,13 @@
+@mixin flex{
+  display:flex;
+}
+
+@mixin flexBetween{
+  display:flex;
+  justify-content:space-between;
+}
+
+@mixin flexMid{
+  display:flex;
+  justify-content:center;
+}

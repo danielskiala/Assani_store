@@ -1,0 +1,135 @@
+@import "_variables.scss";
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "SansPro-Regular";
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-size: 15px;
+  color: $color_black;
+  -webkit-font-smoothing: antialiased;
+}
+
+.body-app{
+  width:100%;
+  min-height:100vh;
+  background-color:$color_grey_light_2;
+  padding-bottom:50px;
+}
+
+.body-app::before{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.2s ease 0s;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+svg{
+  width:24px;
+  height:24px;
+  color:$color_black;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  border: none;
+  display: block;
+  line-height: 0;
+}
+
+*::-webkit-calendar-picker-indicator {
+  color: red !important	;
+  filter: invert(0.6);
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+input,
+select,
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  appearance: button;
+  -webkit-appearance: button;
+  border: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  box-shadow: 0 0 0 30px var(--color-white) inset !important;
+  font-family: inherit !important;
+}
+
+textarea {
+  overflow: auto;
+}
+
+p {
+  line-height: normal;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  appearance: textfield;
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[hidden] {
+  display: none;
+}

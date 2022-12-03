@@ -1,0 +1,51 @@
+@import "../../../../assets/sass/_mixins.scss";
+@import "../../../../assets/sass/_variables.scss";
+@media screen and (max-width: 762px) {
+  .nav-wrapper {
+    width: 100%;
+    background-color: $color-white;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    .nav {
+      @include flexBetween;
+      width: 100%;
+      align-items: center;
+      line-height: 0px;
+      padding: 20px 20px;
+      box-shadow: 0px 1px 0px 0px rgba(0 0 0 / 20%);
+      .nav-toggle {
+        display: flex;
+        cursor: pointer;
+        svg {
+          width: 26px;
+          height: 26px;
+        }
+      }
+      .nav-logo {
+        text-align: center;
+        h2 {
+          user-select: none;
+          -webkit-user-select: none;
+          line-height: 15px;
+          font-family: Sofia;
+          font-size: 20px;
+          text-transform: uppercase;
+          // padding-top:3px;
+          display: inline-block;
+          small {
+            font-family: "SansPro-Regular";
+            font-size: 12px;
+            text-transform: capitalize;
+          }
+        }
+      }
+
+      .nav-icons {
+        @include flex;
+        gap: 0 10px;
+      }
+    }
+  }
+}
