@@ -1,5 +1,5 @@
 @import "../sass/_mixins.scss";
-@import "../sass/mixins";
+@import "../sass/_variables.scss";
 @media screen and (max-width: 700px) {
   .main {
     position: relative;
@@ -149,7 +149,7 @@
 
   .main_content{
     width:100%;
-    padding:0 20px;
+    padding:20px;
     .main_title{
       text-transform: uppercase;
       font-family:"sansPro-Light";
@@ -225,5 +225,33 @@
     .color_grey{
       background-color:$color_grey;
     }
+    .color_red{
+      background-color:$color_red;
+    }
+  }
+
+
+  /*----------  Outils swiper  ----------*/
+  /*----------  Outils swiper  ----------*/
+
+  .swiper-button-next,
+  .swiper-button-prev{
+    width:40px !important;
+    height: 40px !important;
+    background-color: $color-white !important;
+    color:$color_black !important;
+    border-radius:50%;
+    display:none !important;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after{
+    font-size:20px !important;
+    font-weight: 900 !important;
+  }
+  .swiper-pagination .swiper-pagination-bullet{
+    width:12px !important;
+    height: 12px !important;
+    background-color:$color-white !important;
   }
 }

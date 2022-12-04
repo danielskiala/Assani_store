@@ -24,7 +24,9 @@
         }
       }
       .nav-logo {
+        display: block;
         text-align: center;
+        margin-left: 32px;
         h2 {
           user-select: none;
           -webkit-user-select: none;
@@ -45,6 +47,69 @@
       .nav-icons {
         @include flex;
         gap: 0 10px;
+        margin-right: -5px;
+        a {
+          padding: 4px;
+        }
+      }
+    }
+  }
+  .side_nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0 0 0 / 80%);
+    z-index: 4000;
+    opacity: 0;
+    visibility: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+    &.active {
+      opacity: 1;
+      visibility: 1px;
+      pointer-events: auto;
+    }
+
+    .side_content {
+      background: $color-white;
+      width: 230px;
+      height: 100%;
+      transition: transform 0.2s;
+      transform: translateX(-100%);
+      &.active {
+        transform: translateX(0%);
+      }
+
+      .side_head {
+        @include flexBetween;
+        width: 100%;
+        padding: 20px;
+        align-items: center;
+        h3 {
+          font-family: "sofia";
+          text-transform: uppercase;
+        }
+
+        .side_icon_login {
+          @include flexMid;
+          align-items: center;
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      .side_nav_link {
+        width: 100%;
+        a {
+          display: inline-block;
+          width: 100%;
+          padding: 10px 20px;
+          font-size: 18px;
+          text-transform: capitalize;
+          color: $color_black;
+        }
       }
     }
   }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SwiperOptions } from 'swiper';
+import { Autoplay, SwiperOptions } from 'swiper';
 
 @Component({
   selector: 'app-home',
@@ -22,6 +22,11 @@ export class HomeComponent implements OnInit {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     },
-    spaceBetween: 0
+    spaceBetween: 0,
+    loop:true,
+    speed:1000,
+    autoplay: {
+      delay: 2000,
+    },
   };
 }

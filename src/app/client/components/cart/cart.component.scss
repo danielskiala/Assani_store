@@ -1,0 +1,134 @@
+@import "../../../../assets/sass/_mixins.scss";
+@import "../../../../assets/sass/_variables.scss";
+@media screen and (max-width: 700px) {
+  .main_title {
+    text-transform: capitalize;
+  }
+
+  .detail_header {
+    @include flexBetween;
+    align-items: center;
+    width: 100%;
+    background-color: $color-white;
+    padding:0 20px;
+    height:68px;
+    line-height:0px;
+    box-shadow: 0px 1px 0px 0px rgb(0 0 0 / 20%);
+    span {
+      display: block;
+    }
+    .detail_left {
+      @include flexBetween;
+      align-items: center;
+      color: $color_black;
+      .back {
+        margin-left: 20px;
+      }
+    }
+    .detail_right {
+      @extend .detail_left;
+      .icon {
+        &:last-child {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  .cart {
+    width: 100%;
+    .cart_content {
+      width: 100%;
+      .cart_box {
+        @include flex;
+        width: 100%;
+        padding: 10px 0;
+        border-bottom:1px solid rgba(0 0 0 / 20%);
+        color:$color_black;
+      }
+
+      .cart_img {
+        width: 22%;
+        img {
+          width: 80px;
+          height: 80px;
+          object-fit: cover;
+          object-position: top center;
+        }
+      }
+      .cart_name {
+        width: 50%;
+        padding: 0 10px;
+        align-self:flex-start;
+        h3 {
+          font-family: "sansPro-Light";
+          word-wrap: break-word;
+          font-size: 16px;
+        }
+        p{
+          font-family:"sansPro-Bold";
+          font-size:17px;
+        }
+
+        .product_color{
+          margin:4px 0;
+        }
+      }
+      .cart_counter {
+        @include flexBetween;
+        align-items: center;
+        width: 28%;
+        input {
+          display: block;
+          width: 100%;
+          height: 30px;
+          text-align: center;
+          font-family: "SansPro-Bold";
+          outline: none;
+          background-color: transparent;
+        }
+
+        span {
+          @include flex;
+          align-items: center;
+          display: inline-block;
+          padding: 2px 4px;
+          svg {
+            width: 22px;
+            height: 22px;
+          }
+        }
+      }
+    }
+  }
+
+  .buy_btn{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    padding:20px;
+    border-top:1px solid rgba(0 0 0 / 20%);
+    button{
+      width: 100%;
+      border: none;
+      outline: none;
+      display: inline-block;
+      background-color: $color_black;
+      font-family: "sansPro-Regular";
+      padding: 14px 20px;
+      color: $color-white;
+      border-radius: 6px;
+    }
+
+    .buy_information{
+      width:100%;
+      margin-bottom:20px;
+    }
+    .buy_info_head{
+      @include flexBetween;
+      align-items:center;
+      margin-bottom:10px;
+    }
+  }
+}

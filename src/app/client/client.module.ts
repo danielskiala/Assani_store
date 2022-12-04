@@ -5,6 +5,8 @@ import { NavComponent } from './components/nav/nav.component';
 import { ClientRoutingModuleModule } from './client-routing-module.module';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { DetailComponent } from './components/detail/detail.component';
+import { CartComponent } from './components/cart/cart.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 
@@ -12,7 +14,9 @@ import { DetailComponent } from './components/detail/detail.component';
   declarations: [
     HomeComponent,
     NavComponent,
-    DetailComponent
+    DetailComponent,
+    CartComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,

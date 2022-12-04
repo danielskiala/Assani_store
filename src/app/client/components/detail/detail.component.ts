@@ -8,6 +8,7 @@ import { SwiperOptions } from 'swiper';
 })
 export class DetailComponent implements OnInit {
   number_product:any = 1;
+  toCart:boolean = false;
   constructor() { }
 
   ngOnInit(): void {
@@ -16,7 +17,7 @@ export class DetailComponent implements OnInit {
   count_product(e: Event) {
     const btn_count = (e.target as HTMLElement);
     const minus = (document.querySelector(".minus") as HTMLElement);
-    const input:any = document.querySelector('#show_count');
+    const input = (document.querySelector('#show_count') as HTMLInputElement);
 
     if (btn_count.className.includes("plus")) {
       this.number_product++;
@@ -32,6 +33,26 @@ export class DetailComponent implements OnInit {
     }
   }
 
+  addToCart(){
+    const modalCart = (document.querySelector('.detail_modal_cart') as HTMLElement);
+    const modalCartContent = (document.querySelector('.modal_cart_content') as HTMLElement);
+    modalCart.classList.add('active');
+    modalCartContent.classList.add('active')
+    this.toCart = true;
+  }
+
+  closeModalCart(){
+    const modalCart = (document.querySelector('.detail_modal_cart') as HTMLElement);
+    const modalCartContent = (document.querySelector('.modal_cart_content') as HTMLElement);
+
+    modalCart.classList.remove('active');
+    modalCartContent.classList.remove('active')
+    this.toCart = false;
+  }
+
+  stopPropagation(e:Event){
+    e.stopPropagation();
+  }
   config: SwiperOptions = {
     pagination: {
       el: '.swiper-pagination',

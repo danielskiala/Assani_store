@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-nav',
@@ -7,10 +6,27 @@ import { environment } from 'src/environments/environment.prod';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
-  linkStyle: string = environment.linkStyle;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggle(){
+    const sideNav = (document.querySelector('.side_nav') as HTMLElement);
+    const sideContent = (document.querySelector('.side_content') as HTMLElement)
+    sideNav.classList.add('active');
+    sideContent.classList.add('active');
+  }
+
+  closeModal(){
+    const sideNav = (document.querySelector('.side_nav') as HTMLElement);
+    const sideContent = (document.querySelector('.side_content') as HTMLElement)
+    sideNav.classList.remove('active');
+    sideContent.classList.remove('active');
+  }
+
+  stop(e:Event){
+    e.stopPropagation();
   }
 
 }

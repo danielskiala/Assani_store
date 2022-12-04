@@ -4,7 +4,7 @@
     <!-- Detail-header -->
     <!-- Detail-header -->
     <div class="detail_header">
-      <a routerLink="#" class="detail_left">
+      <a routerLink="/home" class="detail_left">
         <span class="icon"></span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -394,9 +394,9 @@
   <!-- Detail-addTo-cart -->
   <!-- Detail-addTo-cart -->
   <div class="detail_add_to_cart">
-    <div class="detail_modal_cart">
-      <div class="modal_cart_content">
-        <div class="cart_cancel">
+    <div class="detail_modal_cart" (click)="closeModalCart()">
+      <div class="modal_cart_content"(click)="stopPropagation($event)">
+        <div class="cart_cancel" (click)="closeModalCart()">
           <span class="icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -522,7 +522,8 @@
       </div>
     </div>
     <div class="detail_btn_cart">
-      <button>Ajouter au panier</button>
+      <button *ngIf="!toCart" (click)="addToCart()">Ajouter au panier</button>
+      <a routerLink="/cart" *ngIf="toCart">Ajouter au panier</a>
     </div>
   </div>
   <!-- Detail-addTo-cart -->
