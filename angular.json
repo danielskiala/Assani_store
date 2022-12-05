@@ -49,7 +49,7 @@
               "src/favicon.ico",
               "src/assets",
               {
-                "glob": "src/_redirects",
+                "glob": "_redirects",
                 "input": "src",
                 "output": "/"
               }
